@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Fira Code", monospace;
+}
+
+
+a{
+    color: rgb(94, 255, 167);
+    text-decoration: none;
+    font-size: 10px;
+    padding: 12px;
+    transition: color 0.6s;
+}
+
+a:hover{
+    color: rgb(231, 255, 124);
+}
+
+a:focus{
+    outline: none;
+}
+
+.uline-effect{
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: 0.6s;
+}
+  
+.uline-effect:hover{
+    text-decoration-color: rgb(164, 255, 80);
+}
+
+body{
+    background-image: url("../dark_mosaic.png");
+    text-align: center;
+    color:rgb(199, 202, 202);
+    background-color:rgb(8, 8, 8);
+    scrollbar-width: thin;         
+    scrollbar-color: rgb(15, 15, 15) rgb(5, 5, 5);
+    box-sizing: border-box;
+}
+
+.input_box{
+    text-align: center;
+    border: none;
+    padding: 10px;
+    background: #0f1013;
+    color: #777777;
+    font-size: 10px;
+    transition: 0.5px all;
+    border-radius: 5px;
+    width: 400px;
+    box-shadow: 0px 10px 10px black;
+}
+
+input[type="text"]:focus{
+    outline: none;
+}
+
+.button{
+    background-color: rgb(5, 5, 5);
+    outline: none;
+    border: 2px solid rgb(10, 10, 10);
+    color: rgb(52, 255, 79);
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 2px black;
+    height: 28px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.button:hover{
+    color: white;
+}
+
+.form-popup{
+    display: none;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform : translate(-50%, -50%);
+    z-index: 9;
+    font-size: 10px;
+}
+
+.form-container{
+    text-align: left;
+    max-width: 200px;
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(15, 15, 15);
+}
+
+.form-container input[type="text"]{
+    font-size: 9px;
+    margin-top: 5px;
+    width: 180px;
+    padding: 10px;
+    height: 10px;
+    border: none;
+    background: #a1a1a1;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.form-container input[type="text"]:focus{
+    background-color: #666666;
+}
+
+.form-container .btn{
+    font-size: 9px;
+    background-color:rgb(14, 14, 14);
+    color:rgb(173, 189, 192);
+    padding: 10px;
+    width: 100%;
+    border: none;
+    opacity: 0.4;
+    border-radius: 3px;
+    height: 33px;
+}
+
+.form-container .btn:focus{
+    border: none;
+    outline: none;
+}
+
+select{
+    font-size:10px;
+    width: 100%;
+    margin-top: 5px;
+    background-color: #a1a1a1;
+    border:none;
+    padding: 5px;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.form-container .btn:hover{
+    opacity: 1;
+}
+
+
+#container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; 
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+}
+
+#personal{
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 180px;
+    background-color: rgb(5, 5, 5);
+    margin: 10px;
+    border-radius: 5px; 
+    overflow: hidden;
+    box-shadow: 0px 5px 2px black;
+    opacity: 0.6;
+    transition: opacity 0.6s;
+}
+
+#personal:hover{
+    overflow: auto;
+    opacity: 1;
+}
+
+#boards{
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 180px;
+    background-color: rgb(5, 5, 5);
+    margin: 10px;
+    border-radius: 5px; 
+    overflow: hidden;
+    box-shadow: 0px 5px 2px black;
+    opacity: 0.6;
+    transition: opacity 0.6s;
+}   
+
+#boards:hover{
+    overflow: auto;
+    opacity: 1;
+}
+
+#coding{
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 180px;
+    background-color: rgb(5, 5, 5);
+    margin: 10px;
+    border-radius: 5px; 
+    overflow: hidden;
+    box-shadow: 0px 5px 2px black;
+    opacity: 0.6;
+    transition: opacity 0.6s;
+}
+
+#coding:hover{
+    overflow: auto;
+    opacity: 1;
+}
+
+#etc{
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 180px;
+    background-color: rgb(5, 5, 5);
+    margin: 10px;
+    border-radius: 5px; 
+    overflow: hidden;
+    box-shadow: 0px 5px 2px black;
+    opacity: 0.6;
+    transition: opacity 0.6s;
+}
+
+#etc:hover{
+    overflow: auto;
+    opacity: 1;
+}
+
+#clock{
+    background-image: linear-gradient(180deg, rgb(12, 12, 12), rgb(0,0,0));
+    background-color: rgb(5, 5, 5);
+    font-size: 11px;
+    padding: 8px;
+}
+
+.text-style{
+    font-size: 11px;
+    padding: 8px;
+    background-color: rgb(5, 5, 5);
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 2px black;
+}
