@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <!--<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">-->
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap" rel="stylesheet">    
+        <link rel="stylesheet" href="css/styles.css">
+
+        <title>~</title>
+    </head>
+
+    <body onload="loadExistingBookmarksFromStorage()">
+        <div id="clock"></div>
+        </br>
+        <form action="https://www.startpage.com/do/search?query=" method="get" target="_blank">
+
+        <input class="input_box" type="text" name="q" placeholder="..." onfocus='this.value = ""' 
+        autofocus autocomplete="off"/> </form>
+        </br>
+        <button class="button" type="button" onclick="openForm()">+</button>
+           
+        <div class="form-popup form-container" id="myForm">
+            <form method="POST">
+                <label for="name"><b>Name</b></label>
+                <input type="text" name="name" id="name" autocomplete="off" 
+                onfocus='this.value = ""' />
+            </br></br>
+                <label for="url"><b>Url</b></label>
+                <input type="text" name="url" id="url" autocomplete="off" 
+                onfocus='this.value = ""' />
+            </br></br>
+                <label for="category"><b>Category</b></label>
+                <select name="category" id="category">
+                    <option value="personal">Personal</option>
+                    <option value="boards">Boards</option>
+                    <option value="coding">Coding</option>
+                    <option value="etc">Etc.</option>
+                </select>   
+            </br></br></br>
+                <input class="btn" type="button" onclick="addNewBookmark();" value="Add Bookmark" />
+            </br></br>
+                <input class="btn" type="button" onclick="deleteBookmarkAndReload();" value="Remove Bookmark" />
+            </br></br>
+                <!--<input class="btn" type="button" onclick="clearStorageAndReload()" value="Clear LS" />
+            </br></br>-->
+                <input class="btn" type="button" onclick="closeForm();" value="Close" />
+            </form>
+        </div>
+       
+        <div id="container">
+            <div class="header">
+                <p class="text-style">Personal</p>
+                <div id="personal"></div>
+            </div>
+
+            <div class="header">
+                <p class="text-style">Boards</p>
+                <div id="boards"></div>
+            </div>
+
+            <div class="header">
+                <p class="text-style">Coding</p>
+                <div id="coding"></div>
+            </div>
+
+            <div class="header">
+                <p class="text-style">Etc.</p>
+                <div id="etc"></div>
+            </div>
+        </div>
+            
+            
+        <script src="js/main.js"></script>
+        <script src="js/time.js"></script>
+    </body>
+</html>
